@@ -7,6 +7,11 @@ app = Flask(__name__)
 def home():
     return render_template("home.html")
 
+@app.route("/space")
+def second():
+	return render_template("about.html")
+
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
