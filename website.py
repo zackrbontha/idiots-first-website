@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template
+from testo import spam
 import os
 
 app = Flask(__name__)
@@ -7,7 +8,11 @@ app = Flask(__name__)
 def home():
     return render_template("home.html")
 
+@app.route("/omega")
+def test():
+	return spam()
+	
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
-    app.run(debug=True, host='0.0.0.0', port=port)
+    app.run(host='0.0.0.0', port=port)
