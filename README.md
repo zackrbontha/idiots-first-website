@@ -1,4 +1,4 @@
-# idiots-first-website
+# idiots first website
 レースカー
 
 http://shouldyoudodge.com
